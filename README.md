@@ -27,3 +27,7 @@ This Java program, named "Library," provides implementations for several basic t
 3. **Calculating Averages Task**: The method calculateAverage(array) calculates and returns the average of integer values in an array.
 
 4. **Arrays of Arrays Task**: The method calculateLowestAverage(arrays) calculates the average for each array within an array of arrays and returns the array with the lowest average.
+
+#### Testing on cmd 
+
+[CmdTest](./img/Test%20.png)
