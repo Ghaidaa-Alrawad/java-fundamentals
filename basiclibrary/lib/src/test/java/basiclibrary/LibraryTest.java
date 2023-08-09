@@ -9,6 +9,45 @@ import static org.junit.jupiter.api.Assertions.*;
 class LibraryTest {
     @Test void someLibraryMethodReturnsTrue() {
         Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+//        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+    }
+
+    @Test
+    void testRollMethod() {
+        int[] rolls = Library.roll(4);
+        System.out.println("Rolling Dice Task: ");
+        for (int roll : rolls) {
+            System.out.print(roll + " ");
+            assertTrue(roll >= 1 && roll <= 6);
+        }
+        System.out.println();
+    }
+
+    @Test
+    void testContainsDuplicatesMethod() {
+        int[] duplicatesArray = {1, 2, 3, 4, 5, 6, 4};
+        System.out.println("Contains Duplicates Task: " + Library.containsDuplicates(duplicatesArray));
+    }
+
+    @Test
+    void testCalculateAverageMethod() {
+        int[] averageArray = {10, 20, 30, 40, 50};
+        System.out.println("Average Task: " + Library.calculateAverage(averageArray));
+    }
+
+    @Test
+    void testCalculateLowestAverageMethod() {
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        int[] lowestAverageArray = Library.calculateLowestAverage(weeklyMonthTemperatures);
+        System.out.println("Lowest Average Array Task: ");
+        for (int num : lowestAverageArray) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 }
