@@ -14,6 +14,8 @@ This Java program, named "basiclibray", provides implementations for several bas
 
 ![](./img/Test%20.png)
 
+---
+
 # Lab 03 Basic Library
 
 We continue to work on the same java program, in this lab03 in the MapAndTally java file i've implemented 2 new methods as the lab03 required: 
