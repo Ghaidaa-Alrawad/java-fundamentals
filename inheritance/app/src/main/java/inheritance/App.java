@@ -4,5 +4,49 @@
 package inheritance.app.src.main.java.inheritance;
 
 public class App {
+    public static void main(String[] args) {
+        Restaurant restaurant = new Restaurant("Tasty Bites", "Delicious food!", 4, 2);
+        Shop shop = new Shop("SuperMart", "Wide variety of products", 3, 3);
+        Theater theater = new Theater("Wacky Wizardry Theatre", "Enjoy the latest movies", 4);
+
+        Review restaurantReview = new Review("Great food and atmosphere", "Ghaidaa", 5, restaurant);
+        Review shopReview = new Review("Good shopping experience", "Ghaidaa", 4, shop);
+
+        // Review for the theater without a movie
+        Review theaterReview = new Review("Awesome theater experience!", "Ghaidaa", 5, theater);
+
+        System.out.println("Restaurant Review");
+        System.out.println(restaurantReview);
+        System.out.println("---");
+        System.out.println("Shop Review");
+        System.out.println(shopReview);
+        System.out.println("---");
+        System.out.println("Theater Review without Movie");
+        System.out.println(theaterReview);
+
+
+        // Review for the theater with a movie
+        Review theaterReviewWithMovie = new Review("Fantastic movie!", "Ghaidaa", 5, theater);
+        theaterReviewWithMovie.setMovie("Harry Potter and the Half-Blood Prince");
+        System.out.println("---");
+        System.out.println("Theater Review with Movie");
+        System.out.println(theaterReviewWithMovie);
+
+        System.out.println("---");
+        //test adding movies to the theater
+        System.out.println("test adding movies to the theater: ");
+        theater.addMovie("Harry Potter and the Chamber of Secrets");
+        theater.addMovie("Harry Potter and the Goblet of Fire");
+        theater.addMovie("Mulan");
+        System.out.println("Movies at the theater: " + theater.getMovies());
+
+
+        System.out.println("---");
+        //test removing movies to the theater
+        System.out.println("test removing movies from the theater: ");
+        theater.removeMovie("Mulan");
+        System.out.println("Movies at the theater after removing Mulan: " + theater.getMovies());
+
+    }
 
 }
