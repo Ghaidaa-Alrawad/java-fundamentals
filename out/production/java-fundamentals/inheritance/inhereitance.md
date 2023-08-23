@@ -8,8 +8,6 @@ The library consists of two main classes:
 
 The `Restaurant` class has the ability to calculate its average star rating based on associated reviews, while the `Review` class provides information about the review's content and associated restaurant.
 
-### Testing 
-
-You can run the tests using `gradlew test` on cmd, or you can use `gradle test` using ubuntu 
+### Testing on cmd
 
 ![](./img/test.png)
